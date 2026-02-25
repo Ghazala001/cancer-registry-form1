@@ -1,47 +1,109 @@
 <link rel="stylesheet" href="style.css">
-<!-- Patient Information -->
-<input type="text" name="patientName">
-<input type="text" name="fatherName">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cancer Registry Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; padding: 20px; }
+    .container { background: white; padding: 20px; max-width: 800px; margin: auto; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 6px; margin-bottom: 12px; }
+    label { font-weight: bold; }
+    button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
 
-<select name="gender">
-  <option>Male</option>
-  <option>Female</option>
-</select>
+<div class="container">
+  <h2>Cancer Registry Form</h2>
 
-<input type="date" name="dob">
-<input type="number" name="age">
-<input type="text" name="cnic">
+  <!-- Basic Patient Info -->
+  <label>Name of Health Facility</label>
+  <input type="text" name="facility">
 
-<textarea name="address"></textarea>
+  <label>Hospital Patient ID No</label>
+  <input type="text" name="patient_id">
 
-<input type="text" name="district">
-<input type="text" name="province">
-<input type="text" name="phone">
+  <label>Name of Patient</label>
+  <input type="text" name="patient_name" required>
 
-<input type="text" name="cancerSite">
-<input type="text" name="histology">
-<input type="date" name="diagnosisDate">
+  <label>Sex</label>
+  <select name="sex">
+    <option value="">Select</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
 
-<select name="stage">
-  <option>I</option>
-  <option>II</option>
-  <option>III</option>
-  <option>IV</option>
-</select>
+  <label>Civil Status</label>
+  <select name="civil_status">
+    <option value="">Select</option>
+    <option>Single</option>
+    <option>Married</option>
+    <option>Widowed</option>
+    <option>Divorced</option>
+  </select>
 
-<select name="surgery">
-  <option>Yes</option>
-  <option>No</option>
-</select>
+  <label>Permanent Address</label>
+  <textarea name="address"></textarea>
 
-<select name="chemo">
-  <option>Yes</option>
-  <option>No</option>
-</select>
+  <label>Mobile #</label>
+  <input type="text" name="mobile">
 
-<select name="radio">
-  <option>Yes</option>
-  <option>No</option>
-</select>
+  <label>Email Address</label>
+  <input type="email" name="email">
+
+  <label>Birth Date</label>
+  <input type="date" name="birth_date">
+
+  <label>Religion</label>
+  <input type="text" name="religion">
+
+  <label>Nationality</label>
+  <input type="text" name="nationality">
+
+  <!-- Patient History Section -->
+  <h3>Patient History</h3>
+
+  <label>Smoking?</label>
+  <select name="smoking">
+    <option value="">Select</option>
+    <option>No</option>
+    <option>Yes - ≤1 pack/day</option>
+    <option>Yes - >1 pack/day</option>
+  </select>
+
+  <label>Age Started Smoking</label>
+  <input type="number" name="age_smoke">
+
+  <label>Drinking Alcohol?</label>
+  <select name="alcohol">
+    <option value="">Select</option>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label>Family History of Cancer?</label>
+  <select name="family_history">
+    <option value="">Select</option>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <!-- Physical Info -->
+  <label>Height (m)</label>
+  <input type="text" name="height">
+
+  <label>Weight (kg)</label>
+  <input type="text" name="weight">
+
+  <label>Body Mass Index (BMI)</label>
+  <input type="text" name="bmi">
+
+  <button type="submit">Submit</button>
+
+</div>
+
+</body>
+</html>
 Add cancer registry form
 
